@@ -36,9 +36,13 @@ if __name__ == "__main__":
     
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
+    button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
     
-    Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
-    Sprite(answerBox, (WINDOW_X/2-ANSWER_X/2, BUTTON_Y/2))
+    
+    
+    calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
+    ans = Sprite(answerBox, (WINDOW_X/2-ANSWER_X/2, BUTTON_Y/2))
+    Sprite(button, (calc.x + 10, ans.y + BUTTON_Y + 10))
     App().run()
     
     
