@@ -105,6 +105,7 @@ if __name__ == "__main__":
     fiveBox = Sprite(button, (fourBox.x + BUTTON_X + DIFF, eightBox.y + BUTTON_Y + DIFF))
     Sprite(five, (fiveBox.x + DIFF, fiveBox.y + DIFF - 5))
     sixBox = Sprite(button, (fiveBox.x + BUTTON_X + DIFF, nineBox.y + BUTTON_Y + DIFF))
+    Sprite(six, (sixBox.x + DIFF, sixBox.y + DIFF - 5))
     multiBox = Sprite(specialButton, (sixBox.x + BUTTON_X + 4*DIFF, divBox.y + BUTTON_Y + DIFF))
     oneBox = Sprite(button, (calc.x + 10, fourBox.y + BUTTON_Y + DIFF))
     twoBox = Sprite(button, (oneBox.x + BUTTON_X + DIFF, fiveBox.y + BUTTON_Y + DIFF))
