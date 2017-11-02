@@ -60,6 +60,8 @@ if __name__ == "__main__":
     decimalBox = Sprite(button, (zeroBox.x + BUTTON_X + DIFF, twoBox.y + BUTTON_Y + DIFF))
     plusBox = Sprite(button, (decimalBox.x + BUTTON_X + 4*DIFF, minusBox.y + BUTTON_Y + DIFF))
     equalsBox = Sprite(button, (decimalBox.x + BUTTON_X + 4*DIFF, plusBox.y + BUTTON_Y + DIFF))
+    
+    App().
     App().run()
     
     
