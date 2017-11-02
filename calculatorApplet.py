@@ -26,7 +26,7 @@ def clear():
     var = 0
     
 def mouseClick(event):
-    if event.x >= sevenBox.x and event.x <= (sevenBox.x + BUTTON_Y):
+    if event.x >= sevenBox.x and event.x <= (sevenBox.x + BUTTON_Y) and event.y >= sevenBox.y and event.y <= sevenBox.y + BUTTON_Y:
         print(7)
         
     
