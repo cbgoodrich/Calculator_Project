@@ -72,11 +72,13 @@ if __name__ == "__main__":
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
     button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
     specialButton = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), red)
+    seven = TextAsset("7", fill = black, style = "Bold 24pt Times")
     
     #SPRITING ALL THE CALCULATOR STUFF
     calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
     ansBox = Sprite(answerBox, (WINDOW_X/2-ANSWER_X/2, BUTTON_Y/2))
     sevenBox = Sprite(button, (calc.x + 10, ansBox.y + BUTTON_Y + DIFF))
+    Sprite(seven, (sevenBox.x + DIFF, sevenBox.y + DIFF - 5))
     eightBox = Sprite(button, (sevenBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
     nineBox = Sprite(button, (eightBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
     divBox = Sprite(specialButton, (nineBox.x + BUTTON_X + 4*DIFF, ansBox.y + BUTTON_Y + DIFF))
@@ -93,6 +95,7 @@ if __name__ == "__main__":
     decimalBox = Sprite(button, (zeroBox.x + BUTTON_X + DIFF, twoBox.y + BUTTON_Y + DIFF))
     plusBox = Sprite(specialButton, (decimalBox.x + BUTTON_X + 4*DIFF, minusBox.y + BUTTON_Y + DIFF))
     equalsBox = Sprite(specialButton, (decimalBox.x + BUTTON_X + 4*DIFF, plusBox.y + BUTTON_Y + DIFF))
+    
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
