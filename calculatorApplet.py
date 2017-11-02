@@ -44,6 +44,8 @@ def mouseClick(event):
         print("*")
     elif event.x>=oneBox.x and event.x<=oneBox.x+BUTTON_Y and event.y>=oneBox.y and event.y<=oneBox.y+BUTTON_Y:
         print(1)
+    elif event.x>=twoBox.x and event.x<=twoBox.x+BUTTON_Y and event.y>=twoBox.y and event.y<=twoBox.y+BUTTON_Y:
+        print(2)
     
 
 if __name__ == "__main__":
