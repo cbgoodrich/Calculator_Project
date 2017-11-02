@@ -26,7 +26,7 @@ def clear():
     var = 0
     
 def mouseClick(event):
-    var = 0
+    if event.x <= 
     
 
 
@@ -39,6 +39,7 @@ if __name__ == "__main__":
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
     button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
+    specialButton = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, red), red)
     
     #SPRITING ALL THE CALCULATOR STUFF
     calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
@@ -46,22 +47,22 @@ if __name__ == "__main__":
     sevenBox = Sprite(button, (calc.x + 10, ansBox.y + BUTTON_Y + DIFF))
     eightBox = Sprite(button, (sevenBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
     nineBox = Sprite(button, (eightBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
-    divBox = Sprite(button, (nineBox.x + BUTTON_X + 4*DIFF, ansBox.y + BUTTON_Y + DIFF))
+    divBox = Sprite(specialButton, (nineBox.x + BUTTON_X + 4*DIFF, ansBox.y + BUTTON_Y + DIFF))
     fourBox = Sprite(button, (calc.x + 10, sevenBox.y + BUTTON_Y + DIFF))
     fiveBox = Sprite(button, (fourBox.x + BUTTON_X + DIFF, eightBox.y + BUTTON_Y + DIFF))
     sixBox = Sprite(button, (fiveBox.x + BUTTON_X + DIFF, nineBox.y + BUTTON_Y + DIFF))
-    multiBox = Sprite(button, (sixBox.x + BUTTON_X + 4*DIFF, divBox.y + BUTTON_Y + DIFF))
+    multiBox = Sprite(specialButton, (sixBox.x + BUTTON_X + 4*DIFF, divBox.y + BUTTON_Y + DIFF))
     oneBox = Sprite(button, (calc.x + 10, fourBox.y + BUTTON_Y + DIFF))
     twoBox = Sprite(button, (oneBox.x + BUTTON_X + DIFF, fiveBox.y + BUTTON_Y + DIFF))
     threeBox = Sprite(button, (twoBox.x + BUTTON_X + DIFF, sixBox.y + BUTTON_Y + DIFF))
-    minusBox = Sprite(button, (threeBox.x + BUTTON_X + 4*DIFF, multiBox.y + BUTTON_Y + DIFF))
+    minusBox = Sprite(specialButton, (threeBox.x + BUTTON_X + 4*DIFF, multiBox.y + BUTTON_Y + DIFF))
     onBox = Sprite(button, (calc.x + 10, oneBox.y + BUTTON_Y + DIFF))
     zeroBox = Sprite(button, (onBox.x + BUTTON_X + DIFF, twoBox.y + BUTTON_Y + DIFF))
     decimalBox = Sprite(button, (zeroBox.x + BUTTON_X + DIFF, twoBox.y + BUTTON_Y + DIFF))
-    plusBox = Sprite(button, (decimalBox.x + BUTTON_X + 4*DIFF, minusBox.y + BUTTON_Y + DIFF))
-    equalsBox = Sprite(button, (decimalBox.x + BUTTON_X + 4*DIFF, plusBox.y + BUTTON_Y + DIFF))
+    plusBox = Sprite(specialButton, (decimalBox.x + BUTTON_X + 4*DIFF, minusBox.y + BUTTON_Y + DIFF))
+    equalsBox = Sprite(specialButton, (decimalBox.x + BUTTON_X + 4*DIFF, plusBox.y + BUTTON_Y + DIFF))
     
-    App().
+    App().listenMouseEvent("click", mouseClick)
     App().run()
     
     
