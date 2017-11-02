@@ -56,6 +56,10 @@ def mouseClick(event):
         print(0)
     elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_Y and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
         print(".")
+    elif event.x>=plusBox.x and event.x<=plusBox.x+BUTTON_Y and event.y>=plusBox.y and event.y<=plusBox.y+BUTTON_Y:
+        print("+")
+    elif event.x>=equalsBox.x and event.x<=equalBox.x+BUTTON_Y and event.y>=equalBox.y and event.y<=equalBox.y+BUTTON_Y:
+        print("=")
     
 
 if __name__ == "__main__":
