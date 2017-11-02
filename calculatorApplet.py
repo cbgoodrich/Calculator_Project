@@ -33,6 +33,7 @@ def mouseClick(event):
     elif event.x>=nineBox.x and event.x<=nineBox.x+BUTTON_Y and event.y>=nineBox.y and event.y<=nineBox.y+BUTTON_Y:
         print(9)
     elif event.x>=divBox.x and event.x<=divBox.x+BUTTON_Y and event.y>=divBox.y and event.y<=divBox.y+BUTTON_Y:
+        print("/")
 
 if __name__ == "__main__":
     
