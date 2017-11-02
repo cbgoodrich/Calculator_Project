@@ -26,7 +26,8 @@ def clear():
     var = 0
     
 def mouseClick(event):
-    if event.x <= 
+    if event.x <= 0:
+        kill = 0
     
 
 
@@ -39,7 +40,7 @@ if __name__ == "__main__":
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
     button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
-    specialButton = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, red), red)
+    specialButton = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), red)
     
     #SPRITING ALL THE CALCULATOR STUFF
     calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
