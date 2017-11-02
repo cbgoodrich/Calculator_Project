@@ -11,7 +11,9 @@ CALC_X = 400
 CALC_Y = 500
 BUTTON_X = 60
 BUTTON_Y = 60
-ANSWER_X = 350
+ANSWER_X = 380
+DIFF = 20
+
 
 
 def processNumber(num):
@@ -38,11 +40,17 @@ if __name__ == "__main__":
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
     button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
     
-    
-    
+    #SPRITING ALL THE CALCULATOR STUFF
     calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
-    ans = Sprite(answerBox, (WINDOW_X/2-ANSWER_X/2, BUTTON_Y/2))
-    Sprite(button, (calc.x + 10, ans.y + BUTTON_Y + 10))
+    ansBox = Sprite(answerBox, (WINDOW_X/2-ANSWER_X/2, BUTTON_Y/2))
+    sevenBox = Sprite(button, (calc.x + 10, ansBox.y + BUTTON_Y + DIFF))
+    eightBox = Sprite(button, (sevenBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
+    nineBox = Sprite(button, (eightBox.x + BUTTON_X + DIFF, ansBox.y + BUTTON_Y + DIFF))
+    divBox = Sprite(button, (nineBox.x + BUTTON_X + 4*DIFF, ansBox.y + BUTTON_Y + DIFF))
+    fourBox = Sprite(button, (calc.x + 10, sevenBox.y + BUTTON_Y + DIFF))
+    fiveBox = Sprite(button, (fourBox.x + BUTTON_X + DIFF, eightBox.y + BUTTON_Y + DIFF))
+    sixBox = Sprite(button, (fiveBox.x + BUTTON_X + DIFF, nineBox.y + BUTTON_Y + DIFF))
+    multiBox = Sprite(button, (sixBox.x + BUTTON_X + 4*DIFF, divBox.y + BUTTON_Y + DIFF))
     App().run()
     
     
