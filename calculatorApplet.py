@@ -76,7 +76,7 @@ if __name__ == "__main__":
     red = Color(0xFF0000, 1)
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
-    
+        
     #CREATING THE BASIS FOR THE CALCULATOR
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
