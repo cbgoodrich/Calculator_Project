@@ -15,45 +15,48 @@ ANSWER_X = 380
 DIFF = 20
 
 
-
+#PROCESSING FUNCTION
 def processNumber(num):
     var = 0
-    
+
+#COMPUTING FUNCTION
 def compute():
     var = 0
-    
+   
+#CLEARING FUNCTION 
 def clear():
     var = 0
-    
+
+#REGISTERING FUNCTION 
 def mouseClick(event):
     if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_Y and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
-        print(7)
+        return num = 7
     elif event.x>=eightBox.x and event.x<=eightBox.x+BUTTON_Y and event.y>=eightBox.y and event.y<=eightBox.y+BUTTON_Y:
-        print(8)
+        return num = 8
     elif event.x>=nineBox.x and event.x<=nineBox.x+BUTTON_Y and event.y>=nineBox.y and event.y<=nineBox.y+BUTTON_Y:
-        print(9)
+        return num = 9
     elif event.x>=divBox.x and event.x<=divBox.x+BUTTON_Y and event.y>=divBox.y and event.y<=divBox.y+BUTTON_Y:
         print("/")
     elif event.x>=fourBox.x and event.x<=fourBox.x+BUTTON_Y and event.y>=fourBox.y and event.y<=fourBox.y+BUTTON_Y:
-        print(4)
+        return num = 4
     elif event.x>=fiveBox.x and event.x<=fiveBox.x+BUTTON_Y and event.y>=fiveBox.y and event.y<=fiveBox.y+BUTTON_Y:
-        print(5)
+        return num = 5
     elif event.x>=sixBox.x and event.x<=sixBox.x+BUTTON_Y and event.y>=sixBox.y and event.y<=sixBox.y+BUTTON_Y:
-        print(6)
+        return num = 6
     elif event.x>=multiBox.x and event.x<=multiBox.x+BUTTON_Y and event.y>=multiBox.y and event.y<=multiBox.y+BUTTON_Y:
         print("*")
     elif event.x>=oneBox.x and event.x<=oneBox.x+BUTTON_Y and event.y>=oneBox.y and event.y<=oneBox.y+BUTTON_Y:
-        print(1)
+        return num = 1
     elif event.x>=twoBox.x and event.x<=twoBox.x+BUTTON_Y and event.y>=twoBox.y and event.y<=twoBox.y+BUTTON_Y:
-        print(2)
+        return num = 2
     elif event.x>=threeBox.x and event.x<=threeBox.x+BUTTON_Y and event.y>=threeBox.y and event.y<=threeBox.y+BUTTON_Y:
-        print(3)
+        return num = 3
     elif event.x>=minusBox.x and event.x<=minusBox.x+BUTTON_Y and event.y>=minusBox.y and event.y<=minusBox.y+BUTTON_Y:
         print("-")
     elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_Y and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
         print("on/clear")
     elif event.x>=zeroBox.x and event.x<=zeroBox.x+BUTTON_Y and event.y>=zeroBox.y and event.y<=zeroBox.y+BUTTON_Y:
-        print(0)
+        return num = 0
     elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_Y and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
         print(".")
     elif event.x>=plusBox.x and event.x<=plusBox.x+BUTTON_Y and event.y>=plusBox.y and event.y<=plusBox.y+BUTTON_Y:
@@ -64,10 +67,12 @@ def mouseClick(event):
 
 if __name__ == "__main__":
     
+    #COLORS
     red = Color(0xFF0000, 1)
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
     
+    #CREATING THE BASIS FOR THE CALCULATOR
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
     button = RectangleAsset(BUTTON_X, BUTTON_Y, LineStyle(1, black), white)
