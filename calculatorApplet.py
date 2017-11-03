@@ -16,15 +16,18 @@ DIFF = 20
 
 def processNumber(num):
     mouseClick(event)
-    if xPos>=sevenBox.x and xPos<=sevenBox.x+BUTTON_X and yPos>=sevenBox.y and yPos<=sevenBox.y+BUTTON_Y:
+    if click_x>=sevenBox.x and click_x<=sevenBox.x+BUTTON_X and click_y>=sevenBox.y and click_y<=sevenBox.y+BUTTON_Y:
         print(7)
 
 def mouseClick(event):
-    xPos = event.x
-    yPos = event.y
-    return xPos, yPos
+    click_x = event.x
+    click_y = event.y
+    return click_x, click_y
 
 if __name__ == "__main__":
+    
+    data = {}
+    data["number"] = 0
     
     #COLORS
     red = Color(0xFF0000, 1)
