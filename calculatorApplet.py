@@ -58,7 +58,7 @@ def clear():
     data["operations"] = ""
     
 def compute():
-    var = 0
+    float(data[
     
 
 if __name__ == "__main__":
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     Sprite(equals, (equalsBox.x + DIFF, equalsBox.y + DIFF - 5))
     
     App().listenMouseEvent("click", mouseClick)
-    App().run(mouseClick)
+    App().run()
     
     
     
