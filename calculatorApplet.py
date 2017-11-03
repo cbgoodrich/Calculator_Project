@@ -20,8 +20,9 @@ def processNumber(num):
         print(7)
 
 def mouseClick(event):
-    return xPos = event.x
-    return yPos = event.y
+    xPos = event.x
+    yPos = event.y
+    return xPos, yPos
 
 if __name__ == "__main__":
     
