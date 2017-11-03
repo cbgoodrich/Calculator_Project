@@ -20,7 +20,7 @@ def processNumber(num):
     mouseClick(event)
     if event.x >= 0 and event.y >= 0:
         if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_Y and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
-        print(7)
+            print(7)
         elif event.x>=eightBox.x and event.x<=eightBox.x+BUTTON_Y and event.y>=eightBox.y and event.y<=eightBox.y+BUTTON_Y:
             processNumber(8)
         elif event.x>=nineBox.x and event.x<=nineBox.x+BUTTON_Y and event.y>=nineBox.y and event.y<=nineBox.y+BUTTON_Y:
