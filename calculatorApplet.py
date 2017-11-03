@@ -14,8 +14,14 @@ BUTTON_Y = 60
 ANSWER_X = 380
 DIFF = 20
 
+def processNumber(num):
+    mouseClick(event)
+    if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X:
+        print(7)
+
 def mouseClick(event):
-    var = 0
+    return event.x
+    return event.y
 
 if __name__ == "__main__":
     
