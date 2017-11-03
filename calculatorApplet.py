@@ -17,21 +17,10 @@ DIFF = 20
 
 #PROCESSING FUNCTION
 def processNumber(num):
-    return num
-    
-
-#COMPUTING FUNCTION
-def compute():
-    var = 0
-   
-#CLEARING FUNCTION 
-def clear():
-    var = 0
-
-#REGISTERING FUNCTION 
-def mouseClick(event):
+    mouseClick(event)
     if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_Y and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
-        processNumber(7)
+        print(7)
+
     elif event.x>=eightBox.x and event.x<=eightBox.x+BUTTON_Y and event.y>=eightBox.y and event.y<=eightBox.y+BUTTON_Y:
         processNumber(8)
     elif event.x>=nineBox.x and event.x<=nineBox.x+BUTTON_Y and event.y>=nineBox.y and event.y<=nineBox.y+BUTTON_Y:
@@ -64,6 +53,19 @@ def mouseClick(event):
         print("+")
     elif event.x>=equalsBox.x and event.x<=equalsBox.x+BUTTON_Y and event.y>=equalsBox.y and event.y<=equalsBox.y+BUTTON_Y:
         print("=")
+    
+
+#COMPUTING FUNCTION
+def compute():
+    var = 0
+   
+#CLEARING FUNCTION 
+def clear():
+    var = 0
+
+#REGISTERING FUNCTION 
+def mouseClick(event):
+    
     
 
 if __name__ == "__main__":
