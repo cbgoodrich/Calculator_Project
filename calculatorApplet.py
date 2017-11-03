@@ -51,7 +51,7 @@ def mouseClick(event):
     elif event.x>=minusBox.x and event.x<=minusBox.x+BUTTON_Y and event.y>=minusBox.y and event.y<=minusBox.y+BUTTON_Y:
         print("-")
     elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_Y and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
-        print("on")
+        print("on/clear")
     elif event.x>=zeroBox.x and event.x<=zeroBox.x+BUTTON_Y and event.y>=zeroBox.y and event.y<=zeroBox.y+BUTTON_Y:
         print(0)
     elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_Y and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
