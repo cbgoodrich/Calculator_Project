@@ -17,6 +17,7 @@ DIFF = 20
 
 #PROCESSING FUNCTION
 def processNumber(num):
+    mouseClick(event)
     return num
     
 
