@@ -16,7 +16,7 @@ DIFF = 20
 
 def processNumber(num):
     mouseClick(event)
-    if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X:
+    if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
         print(7)
 
 def mouseClick(event):
