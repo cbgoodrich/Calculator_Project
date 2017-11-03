@@ -31,28 +31,28 @@ def processNumber(num):
             processNumber(4)
         elif event.x>=fiveBox.x and event.x<=fiveBox.x+BUTTON_Y and event.y>=fiveBox.y and event.y<=fiveBox.y+BUTTON_Y:
             processNumber(5)
-    elif event.x>=sixBox.x and event.x<=sixBox.x+BUTTON_Y and event.y>=sixBox.y and event.y<=sixBox.y+BUTTON_Y:
-        processNumber(6)
-    elif event.x>=multiBox.x and event.x<=multiBox.x+BUTTON_Y and event.y>=multiBox.y and event.y<=multiBox.y+BUTTON_Y:
-        print("*")
-    elif event.x>=oneBox.x and event.x<=oneBox.x+BUTTON_Y and event.y>=oneBox.y and event.y<=oneBox.y+BUTTON_Y:
-        processNumber(1)
-    elif event.x>=twoBox.x and event.x<=twoBox.x+BUTTON_Y and event.y>=twoBox.y and event.y<=twoBox.y+BUTTON_Y:
-        processNumber(2)
-    elif event.x>=threeBox.x and event.x<=threeBox.x+BUTTON_Y and event.y>=threeBox.y and event.y<=threeBox.y+BUTTON_Y:
-        processNumber(3)
-    elif event.x>=minusBox.x and event.x<=minusBox.x+BUTTON_Y and event.y>=minusBox.y and event.y<=minusBox.y+BUTTON_Y:
-        print("-")
-    elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_Y and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
-        print("clear")
-    elif event.x>=zeroBox.x and event.x<=zeroBox.x+BUTTON_Y and event.y>=zeroBox.y and event.y<=zeroBox.y+BUTTON_Y:
-        processNumber(0)
-    elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_Y and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
-        print(".")
-    elif event.x>=plusBox.x and event.x<=plusBox.x+BUTTON_Y and event.y>=plusBox.y and event.y<=plusBox.y+BUTTON_Y:
-        print("+")
-    elif event.x>=equalsBox.x and event.x<=equalsBox.x+BUTTON_Y and event.y>=equalsBox.y and event.y<=equalsBox.y+BUTTON_Y:
-        print("=")
+        elif event.x>=sixBox.x and event.x<=sixBox.x+BUTTON_Y and event.y>=sixBox.y and event.y<=sixBox.y+BUTTON_Y:
+            processNumber(6)
+        elif event.x>=multiBox.x and event.x<=multiBox.x+BUTTON_Y and event.y>=multiBox.y and event.y<=multiBox.y+BUTTON_Y:
+            print("*")
+        elif event.x>=oneBox.x and event.x<=oneBox.x+BUTTON_Y and event.y>=oneBox.y and event.y<=oneBox.y+BUTTON_Y:
+            processNumber(1)
+        elif event.x>=twoBox.x and event.x<=twoBox.x+BUTTON_Y and event.y>=twoBox.y and event.y<=twoBox.y+BUTTON_Y:
+            processNumber(2)
+        elif event.x>=threeBox.x and event.x<=threeBox.x+BUTTON_Y and event.y>=threeBox.y and event.y<=threeBox.y+BUTTON_Y:
+            processNumber(3)
+        elif event.x>=minusBox.x and event.x<=minusBox.x+BUTTON_Y and event.y>=minusBox.y and event.y<=minusBox.y+BUTTON_Y:
+            print("-")
+        elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_Y and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
+            print("clear")
+        elif event.x>=zeroBox.x and event.x<=zeroBox.x+BUTTON_Y and event.y>=zeroBox.y and event.y<=zeroBox.y+BUTTON_Y:
+            processNumber(0)
+        elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_Y and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
+            print(".")
+        elif event.x>=plusBox.x and event.x<=plusBox.x+BUTTON_Y and event.y>=plusBox.y and event.y<=plusBox.y+BUTTON_Y:
+            print("+")
+        elif event.x>=equalsBox.x and event.x<=equalsBox.x+BUTTON_Y and event.y>=equalsBox.y and event.y<=equalsBox.y+BUTTON_Y:
+            print("=")
     
     
 
