@@ -49,8 +49,16 @@ def mouseClick(event):
         data["operations"] += "+"
     elif event.x>=equalsBox.x and event.x<=equalsBox.x+BUTTON_X and event.y>=equalsBox.y and event.y<=equalsBox.y+BUTTON_Y:
         compute()
-
+    elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_X and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
+        clear()
+        
+def clear():
+    data["number1"] = ""
+    data["number2"] = ""
+    data["operations"] = ""
+    
 def compute():
+    var = 0
     
 
 if __name__ == "__main__":
@@ -128,7 +136,7 @@ if __name__ == "__main__":
     Sprite(equals, (equalsBox.x + DIFF, equalsBox.y + DIFF - 5))
     
     App().listenMouseEvent("click", mouseClick)
-    App().run()
+    App().run(mouseClick)
     
     
     
