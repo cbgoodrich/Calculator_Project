@@ -64,6 +64,8 @@ def compute():
         print(float(data["number1"])/float(data["number2"]))
     elif data["operations"] == "*":
         print(float(data["number1"])*float(data["number2"]))
+    elif data["operations"] == "-":
+        print(float(data["number1"])-float(data["number2"]))
     
 
 if __name__ == "__main__":
