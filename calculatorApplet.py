@@ -63,7 +63,7 @@ def compute():
     if data["operations"] == "/":
         print(float(data["number1"])/float(data["number2"]))
     elif data["operations"] == "*":
-        print(float(data["number1"])*float(data["number2"]))
+        print(float(data["number1"]) * float(data["number2"]))
     elif data["operations"] == "-":
         print(float(data["number1"])-float(data["number2"]))
     
