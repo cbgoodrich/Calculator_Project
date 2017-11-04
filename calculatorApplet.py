@@ -39,6 +39,8 @@ def mouseClick(event):
         processNumber(2)
     elif event.x>=threeBox.x and event.x<=threeBox.x+BUTTON_X and event.y>=threeBox.y and event.y<=threeBox.y+BUTTON_Y:
         processNumber(3)
+    elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_X and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
+        processNumber(".")
     elif event.x>=divBox.x and event.x<=divBox.x+BUTTON_X and event.y>=divBox.y and event.y<=divBox.y+BUTTON_Y:
         data["operations"] += "/"
     elif event.x>=multiBox.x and event.x<=multiBox.x+BUTTON_X and event.y>=multiBox.y and event.y<=multiBox.y+BUTTON_Y:
@@ -58,7 +60,10 @@ def clear():
     data["operations"] = ""
     
 def compute():
-    float(data[
+    if data["operations"] == "/":
+        print(float(data["number1"])/float(data["number2"]))
+    elif data["operations"] == "*":
+        print(float(data["number1"])*float(data["number2"]))
     
 
 if __name__ == "__main__":
