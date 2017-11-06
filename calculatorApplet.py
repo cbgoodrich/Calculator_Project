@@ -72,17 +72,17 @@ def clear():
     
 def compute():
     if data["operations"] == "/":
-        data["answer"] = float(data["number1"])/float(data["number2"])
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["answer/"] = float(data["number1"])/float(data["number2"])
+        Sprite(data["answer/"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
-        data["answer"] = float(data["number1"])*float(data["number2"])
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["answer*"] = float(data["number1"])*float(data["number2"])
+        Sprite(data["answer*"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
-        data["answer"] = float(data["number1"])-float(data["number2"])
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["answer-"] = float(data["number1"])-float(data["number2"])
+        Sprite(data["answer-"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
-        data["answer"] = float(data["number1"])+float(data["number2"])
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["answer+"] = float(data["number1"])+float(data["number2"])
+        Sprite(data["answer+"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     
 
 if __name__ == "__main__":
