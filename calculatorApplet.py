@@ -14,6 +14,7 @@ BUTTON_Y = 60
 ANSWER_X = 380
 DIFF = 20
 
+#NUMBER PROCESSING FUNCTION
 def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
@@ -24,7 +25,8 @@ def processNumber(num):
         data["number2"] += str(num)
         data["num2Text"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
         Sprite(data["num2Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
-    
+   
+#MOUSECLICK FUNCTION 
 def mouseClick(event):
     if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
         processNumber(7)
@@ -60,7 +62,8 @@ def mouseClick(event):
         compute()
     elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_X and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
         clear()
-        
+
+#CLEAR FUNCTION        
 def clear():
     data["number1"] = ""
     data["num1Text"].destroy()
@@ -68,8 +71,7 @@ def clear():
     data["num2Text"].destroy()
     data["operations"] = ""
 
-    
-    
+#COMPUTING FUNCTION
 def compute():
     if data["operations"] == "/":
         data["answer/"] = float(data["number1"])/float(data["number2"])
@@ -102,7 +104,6 @@ if __name__ == "__main__":
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
     
-        
     #CREATING THE BASIS FOR THE CALCULATOR
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
     answerBox = RectangleAsset(ANSWER_X, BUTTON_Y, LineStyle(1, black), white)
@@ -166,7 +167,4 @@ if __name__ == "__main__":
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
-    
-    
-    
     
