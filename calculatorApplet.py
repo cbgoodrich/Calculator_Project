@@ -18,7 +18,7 @@ def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
         data["num1Text"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["num1Text"], (ansBox.x + ANSWER_X - 100, ansBox.y + BUTTON_Y/2 - 30))
+        Sprite(data["num1Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     else:
         data["number2"] += str(num)
     
@@ -41,6 +41,8 @@ def mouseClick(event):
         processNumber(2)
     elif event.x>=threeBox.x and event.x<=threeBox.x+BUTTON_X and event.y>=threeBox.y and event.y<=threeBox.y+BUTTON_Y:
         processNumber(3)
+    elif event.x>=zeroBox.x and event.x<=zeroBox.x+BUTTON_X and event.y>=zeroBox.y and event.y<=zeroBox.y+BUTTON_Y:
+        processNumber(0)
     elif event.x>=decimalBox.x and event.x<=decimalBox.x+BUTTON_X and event.y>=decimalBox.y and event.y<=decimalBox.y+BUTTON_Y:
         processNumber(".")
     elif event.x>=divBox.x and event.x<=divBox.x+BUTTON_X and event.y>=divBox.y and event.y<=divBox.y+BUTTON_Y:
