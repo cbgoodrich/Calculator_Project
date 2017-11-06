@@ -17,6 +17,8 @@ DIFF = 20
 def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
+        number1 = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
+        Sprite(number1, (ansBox.x + ANSWER_X - 50, ansBox.y + BUTTON_Y/2))
     else:
         data["number2"] += str(num)
     
@@ -82,6 +84,7 @@ if __name__ == "__main__":
     red = Color(0xFF0000, 1)
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
+    
         
     #CREATING THE BASIS FOR THE CALCULATOR
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
