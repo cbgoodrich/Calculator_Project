@@ -17,8 +17,8 @@ DIFF = 20
 def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
-        number1 = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
-        Sprite(number1, (ansBox.x + ANSWER_X - 50, ansBox.y + BUTTON_Y/2))
+        data["num1Text"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
+        Sprite(data["num1Text"], (ansBox.x + ANSWER_X - 100, ansBox.y + BUTTON_Y/2 - 30))
     else:
         data["number2"] += str(num)
     
@@ -60,6 +60,7 @@ def clear():
     data["number1"] = ""
     data["number2"] = ""
     data["operations"] = ""
+    
     
 def compute():
     if data["operations"] == "/":
