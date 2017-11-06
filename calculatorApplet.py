@@ -73,6 +73,7 @@ def clear():
 
 #COMPUTING FUNCTION
 def compute():
+    data["num2Text"].destroy()
     if data["operations"] == "/":
         data["answer/"] = float(data["number1"])/float(data["number2"])
         data["answer"] = TextAsset(data["answer/"], fill = black, style = "Bold 24pt Times")
