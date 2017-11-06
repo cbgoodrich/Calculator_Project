@@ -74,19 +74,19 @@ def compute():
     if data["operations"] == "/":
         data["answer/"] = float(data["number1"])/float(data["number2"])
         data["answer"] = TextAsset(data["answer/"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer/"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
         data["answer*"] = float(data["number1"])*float(data["number2"])
         data["answer"] = TextAsset(data["answer*"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer*"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
         data["answer-"] = float(data["number1"])-float(data["number2"])
         data["answer"] = TextAsset(data["answer-"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer-"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
         data["answer+"] = float(data["number1"])+float(data["number2"])
         data["answer"] = TextAsset(data["answer+"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer+"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     
 
 if __name__ == "__main__":
