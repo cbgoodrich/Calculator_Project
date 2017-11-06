@@ -18,13 +18,13 @@ DIFF = 20
 def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
-        data["num1Text"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["num1Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        num1Text = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
+        data["num1Text"] = Sprite(num1Text, (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     else:
         data["num1Text"].destroy()
         data["number2"] += str(num)
-        data["num2Text"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["num2Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        num2Text = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
+        data["num2Text"] = Sprite(num2Text, (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
    
 #MOUSECLICK FUNCTION 
 def mouseClick(event):
