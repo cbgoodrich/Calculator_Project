@@ -18,13 +18,13 @@ DIFF = 20
 def processNumber(num):
     if data["operations"] == "":
         data["number1"] += str(num)
-        num1Text = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
-        data["num1Text"] = Sprite(num1Text, (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["num1"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
+        data["num1Text"] = Sprite(data["num1"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     else:
         data["num1Text"].destroy()
         data["number2"] += str(num)
-        num2Text = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
-        data["num2Text"] = Sprite(num2Text, (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        data["num2"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
+        data["num2Text"] = Sprite(data["num2"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
    
 #MOUSECLICK FUNCTION 
 def mouseClick(event):
@@ -65,11 +65,14 @@ def mouseClick(event):
 
 #CLEAR FUNCTION        
 def clear():
-    data["number1"] = ""
-    data["num1Text"].destroy()
-    data["number2"] = ""
-    data["num2Text"].destroy()
-    data["operations"] = ""
+    if data["number1"] != "":
+        data["num1Text"].destroy()
+        data["number1"] = ""
+    if data["number2"] != "":
+        data["num2Text"].destroy()
+        data["number2"] = ""
+    if data["operations"] != "":
+        data["operations"] = ""
 
 #COMPUTING FUNCTION
 def compute():
@@ -77,19 +80,19 @@ def compute():
     if data["operations"] == "/":
         data["answer/"] = float(data["number1"])/float(data["number2"])
         data["answer"] = TextAsset(data["answer/"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
         data["answer*"] = float(data["number1"])*float(data["number2"])
         data["answer"] = TextAsset(data["answer*"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
         data["answer-"] = float(data["number1"])-float(data["number2"])
         data["answer"] = TextAsset(data["answer-"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
         data["answer+"] = float(data["number1"])+float(data["number2"])
         data["answer"] = TextAsset(data["answer+"], fill = black, style = "Bold 24pt Times")
-        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
+        Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     
 
 if __name__ == "__main__":
