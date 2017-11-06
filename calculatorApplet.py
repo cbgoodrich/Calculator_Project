@@ -20,7 +20,10 @@ def processNumber(num):
         data["num1Text"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
         Sprite(data["num1Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     else:
+        data["num1Text"].destroy()
         data["number2"] += str(num)
+        data["num2Text"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
+        Sprite(data["num2Text"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     
 def mouseClick(event):
     if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
@@ -60,19 +63,26 @@ def mouseClick(event):
         
 def clear():
     data["number1"] = ""
+    data["num1Text"].destroy()
     data["number2"] = ""
+    data["num2Text"].destroy()
     data["operations"] = ""
+
     
     
 def compute():
     if data["operations"] == "/":
-        print(float(data["number1"])/float(data["number2"]))
+        data["answer"] = float(data["number1"])/float(data["number2"])
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
-        print(float(data["number1"])*float(data["number2"]))
+        data["answer"] = float(data["number1"])*float(data["number2"])
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
-        print(float(data["number1"])-float(data["number2"]))
+        data["answer"] = float(data["number1"])-float(data["number2"])
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
-        print(float(data["number1"])+float(data["number2"]))
+        data["answer"] = float(data["number1"])+float(data["number2"])
+        Sprite(data["answer"], (ansBox.x + ANSWER_X - 65, ansBox.y + BUTTON_Y/2 - 15))
     
 
 if __name__ == "__main__":
