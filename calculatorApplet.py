@@ -59,6 +59,8 @@ def mouseClick(event):
         data["operations"] += "-"
     elif event.x>=plusBox.x and event.x<=plusBox.x+BUTTON_X and event.y>=plusBox.y and event.y<=plusBox.y+BUTTON_Y:
         data["operations"] += "+"
+    elif event.x>=powerBox.x and event.x<=powerBox.x+BUTTON_X and event.y>=powerBox.y and event.y<=powerBox.y+BUTTON_Y:
+        data["operations"] += "^"
     elif event.x>=equalsBox.x and event.x<=equalsBox.x+BUTTON_X and event.y>=equalsBox.y and event.y<=equalsBox.y+BUTTON_Y:
         compute()
     elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_X and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
@@ -89,6 +91,10 @@ def compute():
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
         data["ans"] = float(data["number1"])+float(data["number2"])
+        data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
+        data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+    elif data["operations"] == "^":
+        data["ans"] = float(data["number1"])**float(data["number2"])
         data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     data["number1"] = str(data["ans"])
