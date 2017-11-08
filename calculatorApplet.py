@@ -17,18 +17,15 @@ DIFF = 20
 #NUMBER PROCESSING FUNCTION
 def processNumber(num):
     if data["operations"] == "":
-        data["num1Text"].destroy()
+        data["display"].destroy()
         data["number1"] += str(num)
         data["num1"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
-        data["num1Text"] = Sprite(data["num1"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["num1"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     else:
-        while data["i"] == 1:
-            data["num1Text"].destroy()
-            data["i"] += 1
-        data["num2Text"].destroy()
+        data["display"].destroy()
         data["number2"] += str(num)
         data["num2"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
-        data["num2Text"] = Sprite(data["num2"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["num2"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
    
 #MOUSECLICK FUNCTION 
 def mouseClick(event):
@@ -69,35 +66,30 @@ def mouseClick(event):
 
 #CLEAR FUNCTION        
 def clear():
-    if data["number1"] != "":
-        data["num1Text"].destroy()
-        data["number1"] = ""
-    if data["number2"] != "":
-        data["num2Text"].destroy()
-        data["number2"] = ""
-    if data["operations"] != "":
-        data["operations"] = ""
-    data["ans"].destroy()
+    data["number1"] = ""
+    data["number2"] = ""
+    data["answer"] = ""
+    data["display"].destroy()
 
 #COMPUTING FUNCTION
 def compute():
-    data["num2Text"].destroy()
+    data["display"].destroy()
     if data["operations"] == "/":
         data["answer/"] = float(data["number1"])/float(data["number2"])
         data["answer"] = TextAsset(data["answer/"], fill = black, style = "Bold 24pt Times")
-        data["ans"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
         data["answer*"] = float(data["number1"])*float(data["number2"])
         data["answer"] = TextAsset(data["answer*"], fill = black, style = "Bold 24pt Times")
-        data["ans"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
         data["answer-"] = float(data["number1"])-float(data["number2"])
         data["answer"] = TextAsset(data["answer-"], fill = black, style = "Bold 24pt Times")
-        data["ans"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
         data["answer+"] = float(data["number1"])+float(data["number2"])
         data["answer"] = TextAsset(data["answer+"], fill = black, style = "Bold 24pt Times")
-        data["ans"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
+        data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     data["number1"] = ""
     data["number2"] = ""
 
@@ -108,7 +100,7 @@ if __name__ == "__main__":
     data["number1"] = ""
     data["number2"] = ""
     data["operations"] = ""
-    data["i"] = 1
+
     
     #COLORS
     red = Color(0xFF0000, 1)
