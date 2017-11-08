@@ -17,6 +17,7 @@ DIFF = 20
 #NUMBER PROCESSING FUNCTION
 def processNumber(num):
     if data["operations"] == "":
+        data["display"].destroy()
         data["number1"] += str(num)
         data["num1"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["num1"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
@@ -74,22 +75,22 @@ def clear():
 def compute():
     data["display"].destroy()
     if data["operations"] == "/":
-        data["answer/"] = float(data["number1"])/float(data["number2"])
-        data["answer"] = TextAsset(data["answer/"], fill = black, style = "Bold 24pt Times")
+        data["ans"] = float(data["number1"])/float(data["number2"])
+        data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "*":
-        data["answer*"] = float(data["number1"])*float(data["number2"])
-        data["answer"] = TextAsset(data["answer*"], fill = black, style = "Bold 24pt Times")
+        data["ans"] = float(data["number1"])*float(data["number2"])
+        data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "-":
-        data["answer-"] = float(data["number1"])-float(data["number2"])
-        data["answer"] = TextAsset(data["answer-"], fill = black, style = "Bold 24pt Times")
+        data["ans"] = float(data["number1"])-float(data["number2"])
+        data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     elif data["operations"] == "+":
-        data["answer+"] = float(data["number1"])+float(data["number2"])
-        data["answer"] = TextAsset(data["answer+"], fill = black, style = "Bold 24pt Times")
+        data["ans"] = float(data["number1"])+float(data["number2"])
+        data["answer"] = TextAsset(data["ans"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
-    data["number1"] = ""
+    data["number1"] = str(data["ans"])
     data["number2"] = ""
 
 if __name__ == "__main__":
