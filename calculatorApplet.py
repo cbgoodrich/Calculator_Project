@@ -17,7 +17,6 @@ DIFF = 20
 #NUMBER PROCESSING FUNCTION
 def processNumber(num):
     if data["operations"] == "":
-        data["display"].destroy()
         data["number1"] += str(num)
         data["num1"] = TextAsset(data["number1"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["num1"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
