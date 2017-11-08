@@ -70,6 +70,7 @@ def clear():
     data["number2"] = ""
     data["answer"] = ""
     data["display"].destroy()
+    data["display"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
 
 #COMPUTING FUNCTION
 def compute():
@@ -92,6 +93,7 @@ def compute():
         data["display"] = Sprite(data["answer"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
     data["number1"] = str(data["ans"])
     data["number2"] = ""
+    data["operations"] = ""
 
 if __name__ == "__main__":
     
@@ -100,14 +102,14 @@ if __name__ == "__main__":
     data["number1"] = ""
     data["number2"] = ""
     data["operations"] = ""
+    
 
     
     #COLORS
     red = Color(0xFF0000, 1)
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
-    data["num1Text"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
-    data["num2Text"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
+    data["display"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
     
     #CREATING THE BASIS FOR THE CALCULATOR
     background = RectangleAsset(CALC_X, CALC_Y, LineStyle(1, black), white)
