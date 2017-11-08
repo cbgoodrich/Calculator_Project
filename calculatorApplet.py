@@ -133,6 +133,7 @@ if __name__ == "__main__":
     decimal = TextAsset(".", fill = black, style = "Bold 24pt Times")
     plus = TextAsset("+", fill = black, style = "Bold 24pt Times")
     equals = TextAsset("=", fill = black, style = "Bold 24pt Times")
+    power = TextAsset("^", fill = black, style = "Bold 24pt Times")
     
     #SPRITING ALL THE CALCULATOR STUFF
     calc = Sprite(background, (WINDOW_X/2-CALC_X/2, WINDOW_Y/2-CALC_Y/2))
@@ -171,6 +172,8 @@ if __name__ == "__main__":
     Sprite(plus, (plusBox.x + DIFF, plusBox.y + DIFF - 5))
     equalsBox = Sprite(specialButton, (decimalBox.x + BUTTON_X + 4*DIFF, plusBox.y + BUTTON_Y + DIFF))
     Sprite(equals, (equalsBox.x + DIFF, equalsBox.y + DIFF - 5))
+    powerBox = Sprite(specialButton, (nineBox.x + BUTTON_X + DIFF/2, ansBox.y + BUTTON_Y + DIFF))
+    Sprite(power, (powerBox.x + DIFF, powerBox.y + DIFF - 5))
     
     App().listenMouseEvent("click", mouseClick)
     App().run()
