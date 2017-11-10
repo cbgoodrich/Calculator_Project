@@ -15,6 +15,7 @@ ANSWER_X = 380
 DIFF = 20
 
 #NUMBER PROCESSING FUNCTION
+#CREATES A SPRITE OF THE TEXT ADDED TO THE "number1" and "number2" DICTIONARIES
 def processNumber(num):
     if data["operations"] == "":
         data["display"].destroy()
@@ -27,7 +28,8 @@ def processNumber(num):
         data["num2"] = TextAsset(data["number2"], fill = black, style = "Bold 24pt Times")
         data["display"] = Sprite(data["num2"], (ansBox.x + 10, ansBox.y + BUTTON_Y/2 - 15))
    
-#MOUSECLICK FUNCTION 
+#MOUSECLICK FUNCTION
+#ANALYZES WHERE THE USER CLICKS THEN CALLS ON THE CORRESPONDING FUNCTION EITHER processNumber, compute, or clear
 def mouseClick(event):
     if event.x>=sevenBox.x and event.x<=sevenBox.x+BUTTON_X and event.y>=sevenBox.y and event.y<=sevenBox.y+BUTTON_Y:
         processNumber(7)
@@ -66,7 +68,8 @@ def mouseClick(event):
     elif event.x>=onBox.x and event.x<=onBox.x+BUTTON_X and event.y>=onBox.y and event.y<=onBox.y+BUTTON_Y:
         clear()
 
-#CLEAR FUNCTION        
+#CLEAR FUNCTION
+#CLEARS ALL THE VARIABLES AND DELETES THE "display" SPRITE
 def clear():
     data["number1"] = ""
     data["number2"] = ""
@@ -75,6 +78,7 @@ def clear():
     data["display"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
 
 #COMPUTING FUNCTION
+#DOES THE OPERATION TO THE INPUTTED NUMBERS
 def compute():
     data["display"].destroy()
     if data["operations"] == "/":
@@ -109,12 +113,13 @@ if __name__ == "__main__":
     data["number2"] = ""
     data["operations"] = ""
     
-
     
     #COLORS
     red = Color(0xFF0000, 1)
     white = Color(0x000000, 0)
     black = Color(0x000000, 1)
+    
+    #ORIGINAL DISPLAY SPRITE
     data["display"] = Sprite(TextAsset("", fill = black, style = "Bold 24pt Times"))
     
     #CREATING THE BASIS FOR THE CALCULATOR
