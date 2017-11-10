@@ -105,7 +105,7 @@ def compute():
     data["number2"] = ""
     data["operations"] = ""
 
-#ACTUALLY RUNS THE FUNCTION
+#ACTUALLY RUNS THE PROGRAM
 if __name__ == "__main__":
     
     #DICTIONARIES
